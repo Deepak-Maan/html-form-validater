@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>form-validater</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <form name="myform" id="myForm" onsubmit="return validateForm(event)">
+            <div class="form-card mx-auto">
+                <div class="d-flex gap-3 align-items-center">
+                    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="0.5" y="0.5" width="59" height="59" rx="29.5" stroke="#E7E7E7" />
+                        <path
+                            d="M26.6667 34.0203C32.0891 34.0203 36.6667 34.9125 36.6667 38.3584C36.6667 41.8042 32.0598 42.6667 26.6667 42.6667C21.2444 42.6667 16.6667 41.7731 16.6667 38.3286C16.6667 34.8828 21.2724 34.0203 26.6667 34.0203ZM39.332 24C39.9937 24 40.5307 24.546 40.5307 25.2155V26.7839H42.1348C42.7951 26.7839 43.3334 27.3298 43.3334 27.9993C43.3334 28.6689 42.7951 29.2148 42.1348 29.2148H40.5307V30.7846C40.5307 31.4541 39.9937 32 39.332 32C38.6718 32 38.1334 31.4541 38.1334 30.7846V29.2148H36.532C35.8704 29.2148 35.3334 28.6689 35.3334 27.9993C35.3334 27.3298 35.8704 26.7839 36.532 26.7839H38.1334V25.2155C38.1334 24.546 38.6718 24 39.332 24ZM26.6667 17.3334C30.3395 17.3334 33.2836 20.3155 33.2836 24.0358C33.2836 27.7561 30.3395 30.7383 26.6667 30.7383C22.994 30.7383 20.0499 27.7561 20.0499 24.0358C20.0499 20.3155 22.994 17.3334 26.6667 17.3334Z"
+                            fill="black" />
+                    </svg>
+                    <p class="mb-0 fs-24 fw-medium">Sign up</p>
+                </div>
+                <p class="fs-20 fw-normal pt-4">Register to Mamba - enjoy exclusive <span class="d-block"> features &
+                        many more</span></p>
+                <div class="d-flex flex-column">
+                    <label class="fs-20 fw-medium pb-2" for="name ">Full Name <span class="text-danger">*</span></label>
+                    <div class="d-flex input-group gap-2 align-items-center"><svg width="16" height="20"
+                            viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 13.1739C12.3386 13.1739 16 13.8789 16 16.599C16 19.32 12.3146 20 8 20C3.66237 20 0 19.295 0 16.575C0 13.8539 3.68538 13.1739 8 13.1739ZM8 0C10.9391 0 13.294 2.35402 13.294 5.29105C13.294 8.22808 10.9391 10.5831 8 10.5831C5.0619 10.5831 2.70601 8.22808 2.70601 5.29105C2.70601 2.35402 5.0619 0 8 0Z"
+                                fill="#626262" />
+                        </svg>
+                        <input type="text" id="name">
+                    </div>
+                </div>
+                <div class="d-flex flex-column pt-4 mt-2">
+                    <label class="fs-20 fw-medium pb-2
+                    " for="email ">Email <span class="text-danger">*</span></label>
+                    <div class="d-flex input-group gap-2 align-items-center"><svg width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M16.9395 3C18.2805 3 19.5705 3.53 20.5195 4.481C21.4695 5.43 22.0005 6.71 22.0005 8.05V15.95C22.0005 18.74 19.7305 21 16.9395 21H7.06049C4.26949 21 2.00049 18.74 2.00049 15.95V8.05C2.00049 5.26 4.25949 3 7.06049 3H16.9395ZM18.0705 8.2C17.8605 8.189 17.6605 8.26 17.5095 8.4L13.0005 12C12.4205 12.481 11.5895 12.481 11.0005 12L6.50049 8.4C6.18949 8.17 5.75949 8.2 5.50049 8.47C5.23049 8.74 5.20049 9.17 5.42949 9.47L5.56049 9.6L10.1105 13.15C10.6705 13.59 11.3495 13.83 12.0605 13.83C12.7695 13.83 13.4605 13.59 14.0195 13.15L18.5305 9.54L18.6105 9.46C18.8495 9.17 18.8495 8.75 18.5995 8.46C18.4605 8.311 18.2695 8.22 18.0705 8.2Z"
+                                fill="#626262" />
+                        </svg>
+                        <input id="email" type="email">
+                    </div>
+                </div>
+                <div class="d-flex flex-column pt-4 mt-2">
+                    <label class="fs-20 fw-medium pb-2
+                    " for="password ">Password <span class="text-danger">*</span></label>
+                    <div class="d-flex input-group gap-2 align-items-center"><svg width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.9848 2C15.0535 2 17.5227 4.41479 17.5227 7.39601V8.92935C19.2451 9.46696 20.5 11.0261 20.5 12.8884V17.8253C20.5 20.1308 18.5886 22 16.2322 22H7.7688C5.41136 22 3.5 20.1308 3.5 17.8253V12.8884C3.5 11.0261 4.75595 9.46696 6.47729 8.92935V7.39601C6.48745 4.41479 8.95667 2 11.9848 2ZM11.9949 13.3843C11.5072 13.3843 11.1109 13.7718 11.1109 14.2488V16.4549C11.1109 16.9419 11.5072 17.3294 11.9949 17.3294C12.4928 17.3294 12.8891 16.9419 12.8891 16.4549V14.2488C12.8891 13.7718 12.4928 13.3843 11.9949 13.3843ZM12.0051 3.73904C9.94232 3.73904 8.26569 5.36878 8.25553 7.37613V8.7137H15.7445V7.39601C15.7445 5.37871 14.0678 3.73904 12.0051 3.73904Z"
+                                fill="#626262" />
+                        </svg>
+                        <input id="password" type="password">
+                    </div>
+                </div>
+                <div class="d-flex flex-column pt-4 mt-2">
+                    <label class="fs-20 fw-medium pb-2
+                    " for="password "> Confirm Password <span class="text-danger">*</span></label>
+                    <div class="d-flex input-group gap-2 align-items-center"><svg width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.9848 2C15.0535 2 17.5227 4.41479 17.5227 7.39601V8.92935C19.2451 9.46696 20.5 11.0261 20.5 12.8884V17.8253C20.5 20.1308 18.5886 22 16.2322 22H7.7688C5.41136 22 3.5 20.1308 3.5 17.8253V12.8884C3.5 11.0261 4.75595 9.46696 6.47729 8.92935V7.39601C6.48745 4.41479 8.95667 2 11.9848 2ZM11.9949 13.3843C11.5072 13.3843 11.1109 13.7718 11.1109 14.2488V16.4549C11.1109 16.9419 11.5072 17.3294 11.9949 17.3294C12.4928 17.3294 12.8891 16.9419 12.8891 16.4549V14.2488C12.8891 13.7718 12.4928 13.3843 11.9949 13.3843ZM12.0051 3.73904C9.94232 3.73904 8.26569 5.36878 8.25553 7.37613V8.7137H15.7445V7.39601C15.7445 5.37871 14.0678 3.73904 12.0051 3.73904Z"
+                                fill="#626262" />
+                        </svg>
+                        <input id="confirm-password" type="password">
+                    </div>
+                </div>
+                <button type="submit" class="p-btn">Sign Up</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); //
+
+            var fullName = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+
+            if (fullName === "") {
+                alert("Please enter your full name.");
+                return false;
+            }
+
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert("Please enter a valid email address.");
+                return false;
+            }
+
+            var passwordRegex = /^(?=.*[!@#$%^&*(),.?":{}|<>])(?=.*\d)(?=.*[A-Z]).{8,}$/;
+            if (!passwordRegex.test(password)) {
+                alert("Password must contain at least one special character, one number, one capital letter, and be at least 8 characters long.");
+                return false;
+            }
+
+            if (confirmPassword === "") {
+                alert("Please confirm your password.");
+                return false;
+            }
+
+            if (password !== confirmPassword) {
+                alert("Passwords do not match. Please try again.");
+                return false;
+            }
+            alert("Form submitted successfully.");
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("password").value = "";
+            document.getElementById("confirm-password").value = "";
+            return true;
+        }
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
